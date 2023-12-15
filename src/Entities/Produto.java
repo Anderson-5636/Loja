@@ -34,11 +34,7 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    public String moreInfo(){
-        return "Id: " + this.getId() +
-                "\nDescrição: " + this.getDescricao() +
-                "\nHd: " + this.getHd() +
-                "\nProcessador: " + this.getProcessador() +
-                "\nPreço: " +   Utils.doubleToString(this.getPreco());
+    public abstract void moreInfo(){
+
     }
 }
