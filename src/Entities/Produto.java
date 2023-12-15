@@ -1,6 +1,6 @@
 package Entities;
 
-public class Produto {
+public abstract class Produto {
 
     private int id;
     private String descricao;
@@ -35,7 +35,7 @@ public class Produto {
     public void setPreco(double preco) {
         this.preco = preco;
     }
-    public abstract void moreInfo(){
+    public void moreInfo(){
 
     }
 }
