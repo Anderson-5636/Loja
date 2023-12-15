@@ -1,9 +1,6 @@
 package Entities;
 
-import Utils.Utils;
-
 public class Produto {
-    private static int count = 1;
 
     private int id;
     private String descricao;
@@ -15,6 +12,7 @@ public class Produto {
         this.preco = preco;
     }
 
+
     public int getId() {
         return id;
     }
@@ -25,6 +23,9 @@ public class Produto {
 
     public String getDescricao() {
         return descricao;
+    }
+    public void setDescricao(String descricao) {
+        this.descricao = descricao;
     }
 
     public double getPreco() {
