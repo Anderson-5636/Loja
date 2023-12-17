@@ -1,5 +1,6 @@
 package Entities;
 
+import  Exception. ProductNotFound;
 import java.util.ArrayList;
 
 public class Loja {
@@ -40,7 +41,7 @@ public class Loja {
         return nextId;
     }
 
-    public Produto deleteProdutoById(int Id) {
+    public Produto deleteProdutoById(int Id) throws ProductNotFound {
         for (int i = 0; i < stock.size(); i++) {
             Produto produto = stock.get(i);
             if (Id == produto.getId()) {
@@ -48,10 +49,11 @@ public class Loja {
             }
             return produto;
         }
+        throw new ProductNotFound("Produto com o ID " + Id + " não encontrado.");
 
     }
 
-    public Produto comprarProduto(int id) {
+    public Produto comprarProduto(int id) throws ProductNotFound {
         for (int i = 0; i < stock.size(); i++) {
             Produto produto = stock.get(i);
             if (produto.getId() == id) {
@@ -60,6 +62,7 @@ public class Loja {
                 return produto;
             }
         }
+        throw new ProductNotFound("Produto com o ID " + id + " não encontrado.");
     }
 }
 
