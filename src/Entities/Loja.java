@@ -57,12 +57,13 @@ public class Loja {
         for (int i = 0; i < stock.size(); i++) {
             Produto produto = stock.get(i);
             if (produto.getId() == id) {
-                System.out.println("Produto comprado com Sucesso!");
+                System.out.println("Parabéns Pela Sua Compra!!!");
                 stock.remove(i);
                 return produto;
             }
         }
         throw new ProductNotFound("Produto com o ID " + id + " não encontrado.");
     }
+
 }
 
