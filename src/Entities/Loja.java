@@ -17,7 +17,7 @@ public class Loja {
         stock.add(produto);
     }
 
-    public void listStock() {
+    public static void listStock() {
         if (stock == null || stock.isEmpty()) {
             System.out.println("Ainda Não Temos Nenhum Produto Cadstrado");
         } else {
@@ -40,16 +40,25 @@ public class Loja {
         }
         return nextId;
     }
+    public Produto buscarPorId(int id) throws ProductNotFound {
+        for (Produto produto : stock) {
+            if (produto.getId() == id) {
+                produto.moreInfo();
+                return produto;
+            }
+        }
+        throw new ProductNotFound ("Produto cujo ID " + id + " não foi encontrado.");
+    }
 
-    public Produto deleteProdutoById(int Id) throws ProductNotFound {
+    public Produto deleteProdutoById(int id) throws ProductNotFound {
         for (int i = 0; i < stock.size(); i++) {
             Produto produto = stock.get(i);
-            if (Id == produto.getId()) {
+            if (id == produto.getId()) {
                 stock.remove(i);
             }
             return produto;
         }
-        throw new ProductNotFound("Produto com o ID " + Id + " não encontrado.");
+        throw new ProductNotFound("Produto cujo ID " + id + " não foi encontrado.");
 
     }
 
@@ -57,12 +66,12 @@ public class Loja {
         for (int i = 0; i < stock.size(); i++) {
             Produto produto = stock.get(i);
             if (produto.getId() == id) {
-                System.out.println("Parabéns Pela Sua Compra!!!");
+                System.out.println("!!!Parabéns Pela Sua Compra!!!");
                 stock.remove(i);
                 return produto;
             }
         }
-        throw new ProductNotFound("Produto com o ID " + id + " não encontrado.");
+        throw new ProductNotFound("Produto cujo ID " + id + " não foi encontrado.");
     }
 
 }
