@@ -17,8 +17,8 @@ public class Computador extends Produto {
 
     @Override
     public void moreInfo() {
-        System.out.println("Nome: " + getDescricao());
         System.out.println("Id: " + getId());
+        System.out.println("Nome: " + getDescricao());
         System.out.printf("Preço: R$ %.2f%n", getPreco());
 
         if (ram > 0) {
@@ -27,7 +27,7 @@ public class Computador extends Produto {
             System.out.println("Infelixmente não temos essa informação :(");
         }
         if (hd > 0){
-            System.out.println("RAM: " + ram);
+            System.out.println("HD: " + hd);
         }else {
             System.out.println("Infelixmente não temos essa informação :(");
         }
