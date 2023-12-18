@@ -17,10 +17,10 @@ public class LojaController {
         loja.addProduto(new Computador("Notbook", 4500, 8, 1000));
         loja.addProduto(new Computador("Notbook", 3000, 4, 500));
         loja.addProduto(new Computador("Descktop", 3500, 8, 500));
-        loja.addProduto(new Periferico("Mouse", 35));
-        loja.addProduto(new Periferico("Teclado", 250));
-        loja.addProduto(new Periferico("Led RGB", 350));
-        loja.addProduto(new Periferico("Fone", 50));
+        loja.addProduto(new Periferico("Mouse", 35, "INOVE" ));
+        loja.addProduto(new Periferico("Teclado", 250,"INOVE" ));
+        loja.addProduto(new Periferico("Led RGB", 350, "INOVE"));
+        loja.addProduto(new Periferico("Fone", 50, "INOVE"));
 
     }
 
@@ -32,7 +32,7 @@ public class LojaController {
         System.out.println("|     Opção 1 - Cadastrar |");
         System.out.println("|     Opção 2 - Listar    |");
         System.out.println("|     Opção 3 - Comprar   |");
-        System.out.println("|     Opção 4 - Remover  |");
+        System.out.println("|     Opção 4 - Remover   |");
         System.out.println("|     Opção 5 - Sair      |");
 
     }

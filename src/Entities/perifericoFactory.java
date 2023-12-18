@@ -11,6 +11,10 @@ public class perifericoFactory {
         double preco = scanner.nextDouble();
         scanner.nextLine();
 
-        return new Periferico (descricao, preco);
+        System.out.print("Digite a marca do produto: ");
+        String marca = scanner.nextLine();
+        scanner.nextLine();
+
+        return new Periferico (descricao, preco, marca);
     }
 }

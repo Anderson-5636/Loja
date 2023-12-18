@@ -22,8 +22,8 @@ public class Periferico extends Produto {
     @Override
     public void moreInfo() {
         System.out.println("Id: " + getId());
-        System.out.println("Nome: " + getDescricao());
-        System.out.println("Nome: " + getmarca());
+        System.out.println("Descrição: " + getDescricao());
+        System.out.println("Marca: " + getmarca());
         System.out.printf("Preço: R$ %.2f%n", getPreco());
 
         if (marca != null) {

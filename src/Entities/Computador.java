@@ -18,7 +18,7 @@ public class Computador extends Produto {
     @Override
     public void moreInfo() {
         System.out.println("Id: " + getId());
-        System.out.println("Nome: " + getDescricao());
+        System.out.println("Descrição: " + getDescricao());
         System.out.printf("Preço: R$ %.2f%n", getPreco());
 
         if (ram > 0) {
