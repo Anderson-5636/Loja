@@ -17,6 +17,11 @@ public class LojaController {
         loja.addProduto(new Computador("Notbook", 4500, 8, 1000));
         loja.addProduto(new Computador("Notbook", 3000, 4, 500));
         loja.addProduto(new Computador("Descktop", 3500, 8, 500));
+        loja.addProduto(new Periferico("Mouse", 35));
+        loja.addProduto(new Periferico("Teclado", 250));
+        loja.addProduto(new Periferico("Led RGB", 350));
+        loja.addProduto(new Periferico("Fone", 50));
+
     }
 
     public static void menu() {
