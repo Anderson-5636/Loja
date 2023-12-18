@@ -55,8 +55,8 @@ public class Loja {
             Produto produto = stock.get(i);
             if (id == produto.getId()) {
                 stock.remove(i);
+                return produto;
             }
-            return produto;
         }
         throw new ProductNotFound("Produto cujo ID " + id + " não foi encontrado.");
 

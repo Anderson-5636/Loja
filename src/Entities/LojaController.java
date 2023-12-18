@@ -13,7 +13,7 @@ public class LojaController {
     }
 
     public void addProdutoAuto(){
-        loja.addProduto(new Computador("Descktop", 3500, 8 , 500));
+        loja.addProduto(new Computador("Descktop", 4000, 16 , 500));
         loja.addProduto(new Computador("Notbook", 4500, 8, 1000));
         loja.addProduto(new Computador("Notbook", 3000, 4, 500));
         loja.addProduto(new Computador("Descktop", 3500, 8, 500));
@@ -97,16 +97,17 @@ public class LojaController {
                 System.out.println("______________________________________________");
                 System.out.print("Digite o id do produto que você deseja remover: ");
                 id = scanner.nextInt();
+                scanner.nextLine();
                 try {
-                    scanner.nextLine();
+
                     Produto produtoId = loja.deleteProdutoById(id);
-                    System.out.println("Este será o produto Deletado!");
+                    System.out.println("!Este será o produto Deletado!");
                     produtoId.moreInfo();
                     System.out.println("         !!!SUCESSO!!!        ");
                     System.out.println("--- O produto foi Removido ---");
                 } catch (InputMismatchException | ProductNotFound e) {
                     System.out.println("Entrada inválida. Por favor, insira um número válido.");
-                    scanner.nextLine();
+
                 }
                 break;
             case 5:
